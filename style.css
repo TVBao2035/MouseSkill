@@ -1,0 +1,89 @@
+*{
+    margin: 0;
+    padding: 0;
+    color: white;
+}
+body{
+    background-color: #4a1616;
+}
+.game_mouse_skill{
+    background-color: #333;
+    width: 800px;
+    height: 900px;
+    margin: 10px auto;
+    border-radius: 20px;
+    border: 3px solid white;
+}
+header{
+    display: flex;
+    justify-content: space-around;
+    font-family: sans-serif;
+    padding: 20px;
+    font-size: 30px;
+    background-color: #b70000;
+    border-radius: 20px;
+    border: 2px solid #fff;
+}
+main{
+    width: 800px;
+    height: 600px;
+    position: relative;
+}
+
+.screen{
+    display: grid;
+    grid-template-columns: auto auto auto auto auto auto auto auto auto auto;
+    grid-template-rows: auto auto auto auto auto  auto auto auto auto auto;
+    background-color: #333;
+    gap: 25px;
+    padding: 5px;
+    border-radius: 20px;
+}
+
+.screen  div{
+    background-color:#333;
+    padding: 25px;
+    border-radius: 50%;
+}
+
+.mouse_animation{
+    animation-name: mouse_active;
+    animation-duration: 2s;
+
+}
+
+
+.isGameOver{
+    font-size: 50px;
+    background-color: rgb(174, 0, 255);
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: center;
+    width: 100%;
+    position: absolute;
+    padding: 100px 0;
+    top: 200px;
+
+}
+
+
+
+@keyframes mouse_active {
+    0%{
+        background-color: yellow;
+    }
+
+    25%{
+        background-color: rgb(211, 211, 0);
+    }
+
+    50%{
+        background-color: rgb(181, 181, 27);
+    }
+    75%{
+        background-color: rgb(109, 109, 60);
+    }
+    100%{
+        background-color: #333;
+    }
+}
