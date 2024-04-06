@@ -20,14 +20,14 @@ startGame.onclick = ()=>{
     level = selectElement.value;
     if(level === "1"){
         time = 10;
-        speed = 2200;
-        animationTime = "2s";
-        temp = 100;
+        speed = 1500;
+        animationTime = "1s";
+        temp = 500;
     }else if(level === "2"){
         time = 20;  
         speed = 1200;
-        animationTime = "1s";
-        temp = 200;
+        animationTime = "0.9s";
+        temp = 300;
     } else if(level ==="3"){
         time = 30;
         speed = 1000;
@@ -35,7 +35,7 @@ startGame.onclick = ()=>{
         temp = 500;
     }
 
-
+    time = 30;
     formElement.style.display = 'none';
     articleElement.style.display = 'block'
     var displayTime = speed-temp;
@@ -43,9 +43,9 @@ startGame.onclick = ()=>{
     var play_game = setInterval(function(){
 
         index_mouse = Math.floor(Math.random() * 100 ) + 1 ;
-
         listMouses[index_mouse].classList.add('mouse_animation'); 
         listMouses[index_mouse].style.animationDuration = animationTime;
+
         var display = setTimeout(function(){
             listMouses[index_mouse].classList.remove('mouse_animation');
         }, displayTime);
@@ -60,7 +60,7 @@ startGame.onclick = ()=>{
             listMouses[index_mouse].onclick= {};
         }
     }, speed);
-    
+
     var end_game = setInterval(function(){
         if(time === 0){
             clearInterval(play_game);
